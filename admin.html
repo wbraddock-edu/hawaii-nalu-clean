@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard — Nalu Clean</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="header"><div class="header-inner">
+  <a href="index.html" class="logo"><svg viewBox="0 0 36 36" fill="none" width="36" height="36"><path d="M6 22c2-4 5-6 8-5s4 5 8 4 6-5 8-3" stroke="#0E6655" stroke-width="2.5" stroke-linecap="round" fill="none"/></svg>Nalu Clean</a>
+  <div class="header-actions"><button id="themeToggle" class="btn-theme" aria-label="Toggle dark mode"></button></div>
+</div></header>
+
+<!-- Login Section -->
+<div id="loginSection" style="padding-top:var(--header-h);">
+  <div class="admin-login">
+    <div class="admin-login-card">
+      <svg viewBox="0 0 48 48" fill="none" width="48" height="48" style="margin:0 auto 16px;"><circle cx="24" cy="24" r="23" stroke="var(--primary)" stroke-width="1.5"/><rect x="16" y="22" width="16" height="12" rx="2" stroke="var(--primary)" stroke-width="1.5" fill="none"/><path d="M18 22v-4a6 6 0 0 1 12 0v4" stroke="var(--primary)" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg>
+      <h2>Admin Access</h2>
+      <p>Enter your password to access the Nalu Clean dashboard.</p>
+      <form id="adminLoginForm">
+        <div class="form-group" style="text-align:left;">
+          <label for="adminPassword">Password</label>
+          <input type="password" id="adminPassword" placeholder="Enter admin password" required>
+        </div>
+        <p id="loginError" style="color:#e74c3c;font-size:0.85rem;margin-bottom:12px;"></p>
+        <button type="submit" class="btn-primary" style="width:100%;justify-content:center;display:flex;">Log In</button>
+      </form>
+      <p style="font-size:0.8rem;color:var(--text-muted);margin-top:16px;">Demo password: admin123</p>
+    </div>
+  </div>
+</div>
+
+<!-- Dashboard Section -->
+<div id="dashboardSection" style="display:none;padding-top:var(--header-h);">
+  <div class="admin-dash">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:32px;flex-wrap:wrap;gap:16px;">
+      <div>
+        <h1 style="font-family:var(--font-display);font-size:2rem;">Dashboard</h1>
+        <p style="color:var(--text-muted);">Nalu Clean — Kahului, Maui · <span id="dashDate"></span></p>
+      </div>
+      <button onclick="document.getElementById('dashboardSection').style.display='none';document.getElementById('loginSection').style.display='block';" style="padding:10px 20px;background:var(--gray-100);border-radius:10px;color:var(--text);font-weight:600;">Log Out</button>
+    </div>
+
+    <!-- Stats -->
+    <div class="admin-stats">
+      <div class="stat-card"><div class="stat-val">8</div><div class="stat-label">Pending Bookings</div></div>
+      <div class="stat-card"><div class="stat-val">23</div><div class="stat-label">This Month</div></div>
+      <div class="stat-card"><div class="stat-val">5</div><div class="stat-label">New Messages</div></div>
+      <div class="stat-card"><div class="stat-val">$4,820</div><div class="stat-label">Revenue (Month)</div></div>
+    </div>
+
+    <!-- Pending Bookings -->
+    <div style="background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px;margin-bottom:24px;">
+      <h3 style="font-weight:700;margin-bottom:20px;font-size:1.1rem;">Pending Bookings</h3>
+      <div style="overflow-x:auto;">
+        <table class="admin-table">
+          <thead><tr><th>Name</th><th>Service</th><th>Date</th><th>Time</th><th>Location</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>Sarah M.</td><td>Vacation Rental Turnover</td><td>Jul 2, 2025</td><td>8:00 AM</td><td>Kihei</td><td><span class="status-badge status-pending">Pending</span></td></tr>
+            <tr><td>Mike P.</td><td>Standard Home Clean</td><td>Jul 2, 2025</td><td>10:00 AM</td><td>Kahului</td><td><span class="status-badge status-confirmed">Confirmed</span></td></tr>
+            <tr><td>James K.</td><td>Deep Clean</td><td>Jul 3, 2025</td><td>9:00 AM</td><td>Wailuku</td><td><span class="status-badge status-pending">Pending</span></td></tr>
+            <tr><td>Nalani H.</td><td>Vacation Rental Turnover</td><td>Jul 3, 2025</td><td>11:00 AM</td><td>Paia</td><td><span class="status-badge status-confirmed">Confirmed</span></td></tr>
+            <tr><td>Daniel W.</td><td>Commercial Clean</td><td>Jul 5, 2025</td><td>7:00 AM</td><td>Kahului</td><td><span class="status-badge status-pending">Pending</span></td></tr>
+            <tr><td>Tina L.</td><td>Move-Out Clean</td><td>Jul 7, 2025</td><td>9:00 AM</td><td>Makawao</td><td><span class="status-badge status-pending">Pending</span></td></tr>
+            <tr><td>Robert A.</td><td>Standard Home Clean</td><td>Jul 8, 2025</td><td>1:00 PM</td><td>Paia</td><td><span class="status-badge status-confirmed">Confirmed</span></td></tr>
+            <tr><td>Alyssa T.</td><td>Deep Clean</td><td>Jul 9, 2025</td><td>8:00 AM</td><td>Kahului</td><td><span class="status-badge status-pending">Pending</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Inquiry Messages -->
+    <div style="background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px;">
+      <h3 style="font-weight:700;margin-bottom:20px;font-size:1.1rem;">Inquiry Messages</h3>
+      <div style="overflow-x:auto;">
+        <table class="admin-table">
+          <thead><tr><th>From</th><th>Message</th><th>Date</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>Lisa H.</td><td>Do you serve Lahaina area? Need weekly clean for 3BR...</td><td>Jul 1, 2025</td><td><span class="status-badge status-pending">New</span></td></tr>
+            <tr><td>Tom B.</td><td>Interested in commercial cleaning for our office in Kahului...</td><td>Jun 30, 2025</td><td><span class="status-badge status-pending">New</span></td></tr>
+            <tr><td>Maria G.</td><td>Can you accommodate a same-day turnover on July 4th?</td><td>Jun 30, 2025</td><td><span class="status-badge status-pending">New</span></td></tr>
+            <tr><td>Chris N.</td><td>What's included in the move-in clean package exactly?</td><td>Jun 29, 2025</td><td><span class="status-badge status-confirmed">Replied</span></td></tr>
+            <tr><td>Anna K.</td><td>Do you have a recurring discount for monthly clients?</td><td>Jun 28, 2025</td><td><span class="status-badge status-done">Replied</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+<script>
+document.getElementById('dashDate').textContent = new Date().toLocaleDateString('en-US', {weekday:'long',year:'numeric',month:'long',day:'numeric'});
+</script>
+
+  <!-- Powered by Design Holistically -->
+  <footer style="background:#111;color:#aaa;text-align:center;padding:1.5rem;font-size:0.85rem;font-family:sans-serif;">
+    <p>&copy; 2024. Powered by <a href="https://designholistically.com" target="_blank" rel="noopener" style="color:#fff;text-decoration:underline;">Design Holistically</a>. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

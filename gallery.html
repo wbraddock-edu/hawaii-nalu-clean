@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery — Nalu Clean | Before & After Cleaning Photos</title>
+<meta name="description" content="See the Nalu Clean difference. Before and after photos of our residential, vacation rental, and commercial cleaning work in Maui.">
+<meta property="og:title" content="Gallery — Nalu Clean Maui">
+<meta property="og:image" content="https://picsum.photos/1200/630?random=606">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="header"><div class="header-inner">
+  <a href="index.html" class="logo"><svg viewBox="0 0 36 36" fill="none" width="36" height="36"><path d="M6 22c2-4 5-6 8-5s4 5 8 4 6-5 8-3" stroke="#0E6655" stroke-width="2.5" stroke-linecap="round" fill="none"/><path d="M6 26c2-3 5-5 8-4s4 4 8 3 6-4 8-2" stroke="#A9DFBF" stroke-width="2" stroke-linecap="round" fill="none"/></svg>Nalu Clean</a>
+  <nav class="nav"><a href="index.html">Home</a><a href="services.html">Services</a><a href="about.html">About</a><a href="gallery.html" class="active">Gallery</a><a href="blog.html">Blog</a><a href="faq.html">FAQ</a><a href="reviews.html">Reviews</a></nav>
+  <div class="header-actions"><button id="themeToggle" class="btn-theme" aria-label="Toggle dark mode"></button><a href="booking.html" class="btn-book">Book Now</a><button id="hamburger" class="btn-hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button></div>
+</div></header>
+<nav id="mobileNav" class="mobile-nav"><a href="index.html">Home</a><a href="services.html">Services</a><a href="about.html">About</a><a href="gallery.html">Gallery</a><a href="blog.html">Blog</a><a href="faq.html">FAQ</a><a href="reviews.html">Reviews</a><a href="booking.html">Book a Cleaning</a></nav>
+
+<div class="page-hero">
+  <h1>Our Work</h1>
+  <p>Real results from real Maui homes. Click any photo to enlarge.</p>
+  <div class="breadcrumb"><a href="index.html">Home</a> › Gallery</div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header fade-up">
+      <span class="section-label">Portfolio</span>
+      <h2>Spaces We've Transformed</h2>
+      <p>From beachfront vacation rentals to family homes in Kahului, we take pride in every clean.</p>
+    </div>
+    <!-- Filter Tabs -->
+    <div class="fade-up" style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px;justify-content:center;">
+      <button onclick="filterGallery('all')" class="gallery-filter active" style="padding:8px 20px;border-radius:100px;border:1.5px solid var(--primary);background:var(--primary);color:white;font-weight:600;cursor:pointer;min-height:44px;">All</button>
+      <button onclick="filterGallery('residential')" class="gallery-filter" style="padding:8px 20px;border-radius:100px;border:1.5px solid var(--border);background:transparent;color:var(--text);font-weight:600;cursor:pointer;min-height:44px;transition:all 0.3s;">Residential</button>
+      <button onclick="filterGallery('vacation')" class="gallery-filter" style="padding:8px 20px;border-radius:100px;border:1.5px solid var(--border);background:transparent;color:var(--text);font-weight:600;cursor:pointer;min-height:44px;transition:all 0.3s;">Vacation Rental</button>
+      <button onclick="filterGallery('commercial')" class="gallery-filter" style="padding:8px 20px;border-radius:100px;border:1.5px solid var(--border);background:transparent;color:var(--text);font-weight:600;cursor:pointer;min-height:44px;transition:all 0.3s;">Commercial</button>
+    </div>
+
+    <div class="gallery-grid" id="galleryGrid">
+      <div class="gallery-item fade-up" data-cat="residential"><img src="https://picsum.photos/600/600?random=610" alt="Kitchen after residential clean" loading="lazy"><div class="gallery-item-overlay">Residential Kitchen</div></div>
+      <div class="gallery-item fade-up" data-cat="vacation"><img src="https://picsum.photos/600/600?random=611" alt="Vacation rental bedroom" loading="lazy"><div class="gallery-item-overlay">Vacation Rental Bedroom</div></div>
+      <div class="gallery-item fade-up" data-cat="residential"><img src="https://picsum.photos/600/600?random=612" alt="Bathroom deep clean" loading="lazy"><div class="gallery-item-overlay">Deep Clean Bathroom</div></div>
+      <div class="gallery-item fade-up" data-cat="commercial"><img src="https://picsum.photos/600/600?random=613" alt="Office cleaning" loading="lazy"><div class="gallery-item-overlay">Commercial Office</div></div>
+      <div class="gallery-item fade-up" data-cat="vacation"><img src="https://picsum.photos/600/600?random=614" alt="Vacation rental living room" loading="lazy"><div class="gallery-item-overlay">Vacation Rental Living Room</div></div>
+      <div class="gallery-item fade-up" data-cat="residential"><img src="https://picsum.photos/600/600?random=615" alt="Residential living area" loading="lazy"><div class="gallery-item-overlay">Residential Living Area</div></div>
+      <div class="gallery-item fade-up" data-cat="vacation"><img src="https://picsum.photos/600/600?random=616" alt="Vacation rental kitchen" loading="lazy"><div class="gallery-item-overlay">Vacation Rental Kitchen</div></div>
+      <div class="gallery-item fade-up" data-cat="residential"><img src="https://picsum.photos/600/600?random=617" alt="Master bedroom clean" loading="lazy"><div class="gallery-item-overlay">Master Bedroom</div></div>
+      <div class="gallery-item fade-up" data-cat="commercial"><img src="https://picsum.photos/600/600?random=618" alt="Restaurant kitchen" loading="lazy"><div class="gallery-item-overlay">Restaurant Kitchen</div></div>
+      <div class="gallery-item fade-up" data-cat="residential"><img src="https://picsum.photos/600/600?random=619" alt="Move-out clean" loading="lazy"><div class="gallery-item-overlay">Move-Out Clean</div></div>
+      <div class="gallery-item fade-up" data-cat="vacation"><img src="https://picsum.photos/600/600?random=620" alt="Beachfront rental bathroom" loading="lazy"><div class="gallery-item-overlay">Beachfront Rental Bath</div></div>
+      <div class="gallery-item fade-up" data-cat="commercial"><img src="https://picsum.photos/600/600?random=621" alt="Retail space clean" loading="lazy"><div class="gallery-item-overlay">Retail Space</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <h2>Like What You See?</h2>
+    <p>Let us transform your space. Book online today.</p>
+    <a href="booking.html" class="btn-primary">Book a Cleaning</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand"><div class="logo" style="color:white;"><svg viewBox="0 0 36 36" fill="none" width="36" height="36"><path d="M6 22c2-4 5-6 8-5s4 5 8 4 6-5 8-3" stroke="#A9DFBF" stroke-width="2.5" stroke-linecap="round" fill="none"/></svg>Nalu Clean</div><p>88 Dairy Road, Kahului, HI 96732</p></div>
+    <div><h4>Services</h4><div class="footer-links"><a href="services.html">All Services</a><a href="booking.html">Book Now</a></div></div>
+    <div><h4>Company</h4><div class="footer-links"><a href="about.html">About</a><a href="blog.html">Blog</a><a href="reviews.html">Reviews</a></div></div>
+    <div><h4>Contact</h4><div class="footer-links"><a href="tel:+18085550106">(808) 555-0106</a></div></div>
+  </div>
+  <div class="footer-bottom"><p>© 2025 Nalu Clean</p><p>Powered by <a href="https://designholistically.com" target="_blank" rel="noopener">Design Holistically</a></p></div>
+</footer>
+<button id="backToTop" class="back-to-top" aria-label="Back to top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg></button>
+<script src="js/main.js"></script>
+<script>
+function filterGallery(cat) {
+  document.querySelectorAll('.gallery-item').forEach(item => {
+    const show = cat === 'all' || item.dataset.cat === cat;
+    item.style.display = show ? '' : 'none';
+  });
+  document.querySelectorAll('.gallery-filter').forEach(btn => {
+    btn.style.background = 'transparent';
+    btn.style.color = 'var(--text)';
+    btn.style.borderColor = 'var(--border)';
+  });
+  event.target.style.background = 'var(--primary)';
+  event.target.style.color = 'white';
+  event.target.style.borderColor = 'var(--primary)';
+}
+</script>
+</body>
+</html>
